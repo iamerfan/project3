@@ -10,6 +10,8 @@ export default async function Home() {
 }
 
 async function getData() {
-  const res = await fetch("https://miras-server.vercel.app/api/home");
+  const res = await fetch("https://miras-server.vercel.app/api/home", {
+    cache: "no-cache",
+  });
   return res.json();
 }
